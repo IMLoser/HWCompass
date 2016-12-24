@@ -23,8 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    // 设置背景颜色
     self.view.backgroundColor = [UIColor blackColor];
     
+    // 创建指南针控件
     HWCompass * compass = [HWCompass getCompass];
     _compass = compass;
     compass.frame = CGRectMake(0, 0, 200, 200);
@@ -33,6 +35,7 @@
     
 }
 
+// 点击启动指南针功能
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     [_compass startUpdateHeading];
